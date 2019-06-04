@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Functional login" parallel="tests">
+
+    <test name="chrome 1600x1000">
+        <parameter name="dimensions" value="1600x1000"/>
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="Functional.MainPageTests"/>
+        </classes>
+    </test>
+    <test name="chrome 1024x768">
+        <parameter name="dimensions" value="1024x768"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="login" value="false"/>
+        <classes>
+            <class name="Functional.MainPageTests"/>
+        </classes>
+    </test>
+</suite>
